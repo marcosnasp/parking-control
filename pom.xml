@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.api</groupId>
 	<artifactId>parking-control</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>parking-control</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
