@@ -3,9 +3,8 @@ package com.api.parkingcontrol.service
 import com.api.parkingcontrol.model.ParkingSpotModel
 import com.api.parkingcontrol.repository.ParkingSpotModelRepository
 import org.springframework.data.domain.Page
-import org.springframework.stereotype.Service
 import org.springframework.data.domain.Pageable
-
+import org.springframework.stereotype.Service
 import java.util.*
 import javax.transaction.Transactional
 
@@ -19,10 +18,16 @@ class ParkingSpotService(val parkingSpotModelRepository: ParkingSpotModelReposit
     @Transactional
     fun save(parkingSpot: ParkingSpotModel) = parkingSpotModelRepository.save(parkingSpot)
 
-    fun existsByParkingSpotNumber(parkingSpotNumber: String) = parkingSpotModelRepository.existsByParkingSpotNumber(parkingSpotNumber)
+    fun existsByParkingSpotNumber(parkingSpotNumber: String) =
+        parkingSpotModelRepository.existsByParkingSpotNumber(parkingSpotNumber)
 
-    fun existsByApartmentAndBlock(apartment: String, block: String) = parkingSpotModelRepository.existsByApartmentAndBlock(apartment, block)
+    fun existsByApartmentAndBlock(apartment: String, block: String) =
+        parkingSpotModelRepository.existsByApartmentAndBlock(apartment, block)
+
+    fun existsByLicensePlateCar(licensePlateCar: String): Boolean =
+        parkingSpotModelRepository.existsByLicensePlateCar(licensePlateCar)
 
     @Transactional
     fun delete(parkingSpot: ParkingSpotModel) = parkingSpotModelRepository.delete(parkingSpot)
+
 }
