@@ -1,4 +1,4 @@
-version: '3.5'
+version: '3.9'
 
 services:
   postgres:
@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
       PGDATA: /data/postgres
     volumes:
-       - postgresql-volume:/data/postgres
+       - /tmp/postgresql-volume:/data/postgres
     ports:
       - "54320:5432"
     restart: unless-stopped

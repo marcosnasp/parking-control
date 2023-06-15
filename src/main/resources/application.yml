@@ -1,15 +1,19 @@
+server:
+  port: 9000
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: postgres
-    url: 'jdbc:postgresql://192.168.1.148:5432/parking-control'
+    url: 'jdbc:postgresql://localhost:54320/parking-control'
   jpa:
     show-sql: true
     generate-ddl: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
       hibernate:
         formatSql: true
         jdbc:
           lob:
               non-contextual-creation: true
+        ddl-auto: true
