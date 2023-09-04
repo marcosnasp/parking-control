@@ -6,7 +6,7 @@ Tutorial de Spring Boot API baseado na vídeo aula disponibilizada no vídeo, do
 
 
 ## Preparação Ambiente:
-- JDK 11
+- JDK 17
 - Maven
 - Postman
 - PgAdmin (Postgres)
